@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+postgres/data/
+dbt/my_project/target/
+dbt/my_project/dbt_packages/
+*.log
+.env
+.idea/
