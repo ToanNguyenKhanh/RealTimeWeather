@@ -8,17 +8,12 @@ A Data Engineering pipeline to collect, process, store, and visualize real-time 
 ## Overview
 This pipeline fetches TP.HCM weather data via API, transforms it with DBT, stores it in PostgreSQL, and visualizes it in a Superset dashboard.
 
-## Data Structure
-- Database: weather_report
-- Table: dev
-- Columns:
-  - weather_time_local: Timestamp (e.g., 2025-07-17 08:00:00)
-  - city: TP.HCM
-  - temperature: °C (numeric)
-  - weather_descriptions: Condition (e.g., Sunny, Rainy)
-  - wind_speed: m/s (numeric)
 
 ## Pipeline
+<p align="center">
+  <img src="assets/pipeline.png" width="400"/>
+</p>
+
 1. Ingestion: api-request/api_request.py fetches data; insert_records.py saves to weather_data.
 2. Transformation: DBT models (stg_weather_data.sql, daily_average.sql, weather_report.sql) clean and aggregate data.
 3. Storage: PostgreSQL.
