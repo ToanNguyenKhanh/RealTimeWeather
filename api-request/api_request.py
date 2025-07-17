@@ -1,5 +1,5 @@
 import requests
-api_key = "9155f6fce577271e892256723e6e062f"
+api_key = "YOUR_API_KEY"
 api_url = f"http://api.weatherstack.com/current?access_key={api_key}&query=Ho Chi Minh"
 def fetch_data():
     print("fetching weather data from WeatherStack API ...")
